@@ -41,3 +41,13 @@ var carro = [atributo = "algo"]
 
 // Array
 var compras = ["Açúcar","Arroz"]
+
+//OPERADORES ARITIMÉTICOS
+// + SOMAR (CONCATENAR)
+// - SUBTRAIR
+// * MULTIPLICAR
+// ** ELEVAR UM NUMERO
+// / DIVIDIR
+// = ATRIBUIR
+// ++ SOMAR MAIS UM AO NÚMERO
+// -- SUBTRAIR UM AO NÚMERO
