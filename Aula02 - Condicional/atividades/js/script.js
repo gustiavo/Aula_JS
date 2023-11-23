@@ -1,5 +1,10 @@
 var idade = Number(prompt("Qual é a sua idade?"))
 
+if(idade < 0){
+    alert("Idade inválida! Digite novamente")
+    location.reload()
+
+}else{
 if(idade < 15){
     alert("Criança")
     
@@ -18,6 +23,6 @@ if(idade < 15){
 
     }
 }
-
+}
 confirm("Deseja refazer o procedimento?")
 location.reload()

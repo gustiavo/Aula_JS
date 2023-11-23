@@ -22,6 +22,11 @@ if(true){
 //Verificar idade 
 var idade = Number(prompt("Qual é a sua idade?"))
 
+if(idade < 0){
+    alert("Idade inválida! Digite novamente")
+    location.reload()
+
+}else{
 if(idade >= 18){
     alert("Seja bem vindo!")
 }else{
@@ -34,6 +39,7 @@ if(idade >= 18){
     }
     // location.href = "https://www.google.com.br/?hl=pt-BR"
     //location.reload()
+}
 }
 // condição ? bloco1 : bloco2 (if ternario)
 // x > 10 ? alert("legal") : ("maneiro")
