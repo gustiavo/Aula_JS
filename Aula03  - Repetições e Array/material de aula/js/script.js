@@ -33,7 +33,7 @@ do{
 // ; é obrigatório no for para pooder separar as unidades
 for(let controlador = 1; controlador <= 10; controlador++){
     // no FOR não precisa concatenar com `${} `
-    console.log(controlador+" For é legal")
+    console.log(controlador + " For é legal")
 }
 
 // For earch
