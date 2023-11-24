@@ -9,3 +9,10 @@ do{
     tabuada++
     
 }while( tabuada <= 10)
+
+
+                    // correção
+    for(var cont = 1; cont <= 10; cont++){
+        console.log(`8 x ${cont} = ${cont * 8}`)
+
+    }                   
