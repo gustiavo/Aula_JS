@@ -10,42 +10,44 @@
 // Certifique-se de que a velocidade atual não ultrapasse a velocidade
 // máxima do carro.
 
-// class Carro{
-//     constructor(marca, modelo, ano, cor, veloMax, veloAtual){
-//         this.marca = marca
-//         this.modelo = modelo
-//         this.ano = ano 
-//         this.cor = cor 
-//         this.veloMax = veloMax
-//         this.velocidadeAtual = veloAtual
-//     }
-// }
+class Carro{
+    constructor(marca, modelo, ano, cor, veloMax){
+        this.marca = marca
+        this.modelo = modelo
+        this.ano = ano 
+        this.cor = cor 
+        this.veloMax = veloMax
+        this.veloAtual = 0
+    }
+    acelerar(velocidadeAcelerada){
+        //velocidade atual + valor 
+        if(velocidadeAcelerada <= 0) {
+            return("Velocidade invalida! Coloque uma aceleração maior que 0")
+        }else{
+            if(velocidadeAcelerada + this.veloAtual > this.veloMax){
+                return("velocidade não permitida! Velocidade máxima ultapassada")
 
-var carro = {
-    marca: "Fiat",
-    modelo: "Uno",
-    ano: 1997,
-    cor: "branco",
-    velocidadeMaxima: 250,
-    velocidadeAtual: 0,
-
-    acelerar(velocidade) {
-        if (this.velocidadeAtual + velocidade <= this.velocidadeMaxima) {
-            this.velocidadeAtual += velocidade;
-            console.log("Acelerando. Velocidade atual: " + this.velocidadeAtual + " km/h");
-        } else {
-            console.log("Velocidade máxima atingida. Não é possível acelerar mais.");
+            }else{
+                this.veloAtual += velocidadeAcelerada
+                return "Você acelerou " +velocidadeAcelerada + "km/h "
+            }
         }
     }
-};
+}
+var btnCarro = document.querySelector("#btnCarro")
+btnCarro.addEventListener('click', criarCarro)
+function criarCarro(){
+    let marcaInput = document.querySelector("#marca").value
+    let modeloInput = document.querySelector("#modelo").value
+    let anoInput = document.querySelector("#ano").value
+    let corInput = document.querySelector("#cor").value
+    let veloMaxInput = document.querySelector("#veloMax").value
+    let resposta = document.querySelector("#resposta")
+    
+    var carro = new Carro(marcaInput, modeloInput, anoInput, corInput, veloMaxInput)
 
-console.log("Detalhes do carro:");
-console.log("Marca: " + carro.marca);
-console.log("Modelo: " + carro.modelo);
-console.log("Ano: " + carro.ano);
-console.log("Cor: " + carro.cor);
-console.log("Velocidade Máxima: " + carro.velocidadeMaxima + " km/h");
-console.log("Velocidade Atual: " + carro.velocidadeAtual + " km/h");
+    resposta.innerHTML = `<div class="post"><h3> ${carro.marca} </h3> <h3> ${carro.modelo} </h3> <h3>Ano: ${carro.ano} </h3> <h3 style="color: ${carro.cor};"> COR </h3> <h3> ${carro.veloMax}km/h </h3></div>`
 
-carro.acelerar(50); 
-carro.acelerar(170);
+}
+
+

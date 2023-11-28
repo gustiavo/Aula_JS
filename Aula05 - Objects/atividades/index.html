@@ -5,9 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aividade 05</title>
+    <style>
+        .post{
+            width: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: beige;
+        }
+    </style>
 </head>
 <body>
-    
+        <h1>Crie seu carro</h1>
+        <form>
+            <input type="text" id="marca" placeholder="Marca">
+            <input type="text" id="modelo" placeholder="Modelo">
+            <input type="date" id="ano" placeholder="Ano">
+            <input type="color" id="cor" placeholder="Cor">
+            <input type="number" id="veloMax" placeholder="Velocidade Max">
+            <button type="button" id="btnCarro">CRIAR CARRO</button>
+        </form>
+
+        <div id="resposta"> </div>
 
 
     <script src="js/script.js"></script>

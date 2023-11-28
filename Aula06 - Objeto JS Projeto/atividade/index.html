@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 - Atividade</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .page{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        form div{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        input{
+            border: 1px solid red;
+            border-radius: 5px;
+            padding: 3px;
+            margin-top: 5px;
+        }
+       
+        input:focus{
+           border: none;
+        }
+     
+       #btnFilmes{
+            padding: 15px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 0, 0);
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px rgb(143, 143, 143);
+            font-weight: bold;
+            letter-spacing: 3px;
+            transition: 300ms;
+        }
+        #btnFilmes:hover{
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+       .post{
+            width: 1000px;
+            height: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        h1{
+            margin-bottom: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>Crie seu filme</h1>
+        <form>
+            <div class="input">
+                <div>
+                    <label for="filme"> Filme</label>
+                    <input type="text" id="filme" placeholder="Filme">
+                </div>
+                <div>
+                    <label for="descricao"> Descrição</label>
+                    <input type="text" id="descricao" placeholder="descrição">
+                </div>
+                <div>
+                    <label for="data"> Data</label>
+                    <input type="date" id="data" placeholder="Data">
+                </div>
+                <div>
+                    <label for="diretor"> Diretor</label>
+                    <input type="text" id="diretor" placeholder="Diretor">
+                </div>
+                <div>
+                    <label for="categoria"> Categoria</label>
+                    <input type="text" id="categoria" placeholder="Categoria">
+                </div>
+            </div>
+            <div><button type="button" id="btnFilmes">CRIAR FILME</button></div>
+        </form>
+        <div id="resposta"></div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
