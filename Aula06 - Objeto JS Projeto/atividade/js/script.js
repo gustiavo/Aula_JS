@@ -12,8 +12,15 @@ class Filme{
     }
 
 }
-var btnFilmes = document.querySelector("#btnFilmes")
+const btnFilmes = document.querySelector("#btnFilmes")
+const btnListar = document.querySelector("#btnListar")
+var filme = []
+
 btnFilmes.addEventListener("click", criarFilme)
+btnListar.addEventListener("click", listar)
+
+
+
 function criarFilme(){
     let nomeInput = document.querySelector("#filme").value
     let descricaoInput = document.querySelector("#descricao").value
@@ -21,8 +28,10 @@ function criarFilme(){
     let diretorInput = document.querySelector("#diretor").value
     let categoriaInput = document.querySelector("#categoria").value
     let resposta = document.querySelector("#resposta")
+    
 
-    var filme = new Filme(nomeInput, descricaoInput,dataInput,diretorInput, categoriaInput)
+    filme.push(new Filme(nomeInput, descricaoInput,dataInput,diretorInput, categoriaInput))
+    
 
     resposta.innerHTML = `<div class="post"><h3> ${filme.nome} </h3>
      <h3> ${filme.descricao} </h3> <h3>Ano: ${filme.data} </h3> 
@@ -31,3 +40,17 @@ function criarFilme(){
     `
 
 }
+function listar(){
+    let divResposta = document.querySelector("#listar")
+
+    divResposta.innerHTML = ""
+
+    filme.forEach((elemento) => {divResposta.innerHTML += `  <div class="posd"><h3> ${elemento.nome} </h3>
+    <h3> ${elemento.descricao} </h3> <h3>Ano: ${elemento.data} </h3> 
+    <h3> ${elemento.diretor} </h3>
+     <h3> ${elemento.categoria}</h3></div>
+    
+    `; 
+
+}
+,)}
