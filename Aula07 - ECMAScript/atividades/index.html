@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        div{
+            margin: 3rem 0;
+            display: flex;
+            gap: 20px;
+        }
+        input{
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        button{
+            width: 150px;
+            border-radius: 10px;
+            
+        }
+        hr{
+            width: 100%;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="texto"><textarea name="blocoDeTexto" id="blocoDeTexto" cols="30" rows="10"></textarea></div>
+    <div class="inputs">
+        <input type="text" id="removerTermo" placeholder="Remover termo">
+        <input type="text" id="adicionarTermo" placeholder="Adicionar termo">
+        <button type="button" id="btnTrocar">TROCAR TERMO</button>
+        <button type="button" id="btnTrocarTodos">TROCAR TODOS OS TERMOS</button>
+    </div>
+    
+    <hr>
+
+    <input type="search" id="pesquisa" placeholder="Pesquisar jogo">
+    <button type="button" id="btnPesquisar">Pesquisar</button>
+    <span id="resposta"></span>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
