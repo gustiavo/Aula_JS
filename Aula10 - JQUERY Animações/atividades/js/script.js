@@ -9,7 +9,7 @@ aparecer.on('mouseover', function(){
 
 var mostrar = $('#btnMostrar')
 mostrar.on('click', function(){
-    $('button').css('display', 'block')
+    $(btnTema).css('display', 'block')
 })
 
 
@@ -28,7 +28,7 @@ btnTema.on("click", function(){
         btnTema.text('TEMA CLARO')
     }
 })
-page.on("click", function(){
+btnTema.on("click", function(){
     if(page.hasClass('temaClaro')){
         page.removeClass('temaClaro')
         page.addClass('temaEscuro')
@@ -37,3 +37,49 @@ page.on("click", function(){
         page.addClass('temaClaro')
     }
 })
+
+var caixa = $('#caixa')
+btnTema.on('click', function(){
+    if(page.hasClass('temaEscuro')){
+        caixa.css('display', 'block')
+    }else{
+        caixa.css('display', 'none')
+    }
+})
+
+
+btnTema.on('click', function(){
+    caixa.animate({width: "500px", heigth: "500px", borderRadius: "100%", marginLeft: "1000px"})
+})
+
+var caixa2 = $('#caixa2')
+
+btnTema.on('click', function(){
+    if(page.hasClass('temaEscuro')){
+        caixa2.css('display', 'block')
+    }else{
+        caixa2.css('display', 'none')
+    }
+})
+btnTema.on('click', function(){
+    caixa2.animate({width: "500px", heigth: "500px", borderRadius: "100%", marginRigth: "1000px"})
+})
+
+var girar = $('#girar')
+btnTema.on('click', function(){
+    if(page.hasClass('temaEscuro')){
+        girar.css('display', 'block')
+    }else{
+        girar.css('display', 'none')
+        caixa2.animate({marginTop: "0", marginLeft: "0", rotate : "0"})
+    }
+})
+
+girar.on('click', function(){
+    caixa2.animate({marginTop: "300px", marginLeft: "100px", rotate : "360deg"})
+    caixa2.css("transition", "1000ms")
+    caixa2.css("backgroundColor", "white")
+    caixa2.css("color", "black")
+
+})
+
