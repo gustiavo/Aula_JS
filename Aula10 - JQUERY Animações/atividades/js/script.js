@@ -62,7 +62,7 @@ btnTema.on('click', function(){
     }
 })
 btnTema.on('click', function(){
-    caixa2.animate({width: "500px", heigth: "500px", borderRadius: "100%", marginRigth: "1000px"})
+    caixa2.animate({width: "500px", heigth: "500px", marginRigth: "1000px"})
 })
 
 var girar = $('#girar')
